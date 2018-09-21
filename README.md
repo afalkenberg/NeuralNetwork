@@ -4,21 +4,21 @@ Implemented a neural network in C++ from scratch using a newly developed Percept
 Perform the following three steps in a terminal. This was tested on Macos but should work on Ubuntu as well. 
 
 cd SampleData
-g++ -std=c++14 ../SourceCode/source/*.cpp -I../SourceCode/header -o NewPerceptron.exe
+g++ -std=c++14 ../SourceCode/source/*.cpp -I../SourceCode/header -o NewPerceptron.exe  
 
-rm *.o
+rm *.o  
 
-./NewPerceptron.exe
+./NewPerceptron.exe  
 
-This provides a means to run it with the standard settings. There are a lot of other options as listed below: 
+This provides a means to run it with the standard settings. There are a lot of other options as listed below:   
 
--fr input file name of existing neural network default:none starts with random network
--fw output file name to write neural network default:netWrk99.txt
--l0 learning rate 0  default 0.7 
--l1 learning rate 1  default 0.3
--n0 number neurons inner layer 0   default: no inner layers are defined 
--n1 number neurons inner layer 1
--n2 number neurons inner layer 2
+-fr input file name of existing neural network default:none starts with random network  
+-fw output file name to write neural network default:netWrk99.txt  
+-l0 learning rate 0  default 0.7  
+-l1 learning rate 1  default 0.3  
+-n0 number neurons inner layer 0  default: no inner layers are defined  
+-n1 number neurons inner layer 1  
+-n2 number neurons inner layer 2  
 
 Actually all of the parameters have some default values.
 Since by default the FileReader reads the MNIST the input layer has 784 and the output layer has 10 neurons.  
