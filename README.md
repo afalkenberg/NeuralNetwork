@@ -4,7 +4,7 @@ Implemented a neural network in C++ from scratch using a newly developed Percept
 Perform the following three steps in a terminal. This was tested on Macos but should work on Ubuntu as well. 
 
 cd SampleData
-g++ -std=c++14 ../SourceCode/source/*.cpp -I../SourceCode/header -o NewPerceptron.exe  
+g++ ../SourceCode/source/*.cpp -I../SourceCode/header -o NewPerceptron.exe  
 
 rm *.o  
 
