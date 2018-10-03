@@ -18,7 +18,8 @@
 //
 
 #include "ArgumentParser.h"
-#include <iostream> 
+#include <iostream>
+#include <stdlib.h>
 
 
 void ArgumentParser::setInput(int argc, char* argv[])

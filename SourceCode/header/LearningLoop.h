@@ -40,11 +40,14 @@ private:
 
     std::vector<double> learningRate; 
 
-	int selectCheckFunction = 0; 
+	int selectCheckFunction;   // =0 
 
 
 public: 
 
+
+        LearningLoop(); 
+ 
 	void setNeuralNetwork(NeuralNetwork* n); 
 	void setTrainingVectors(std::vector<std::vector<double> >, std::vector<std::vector<double> >);
 	void setTestVectors(std::vector<std::vector<double> >, std::vector<std::vector<double> >);

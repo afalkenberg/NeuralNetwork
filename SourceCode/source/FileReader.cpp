@@ -26,6 +26,13 @@
 #include <fstream>
 
 
+FileReader::FileReader()
+{
+    imageFileName = (char*)"train-images.idx3-ubyte";
+    labelFileName = (char*)"train-labels.idx1-ubyte"; 
+                                                                                                              }
+
+
 
 
 int FileReader::ReverseInt(int i)

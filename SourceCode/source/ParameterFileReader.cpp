@@ -60,7 +60,7 @@ void ParameterFileReader::readNetwork()
 	NET = new NeuralNetwork(); 
 
 	std::cout << "in read Network " << fileName << std::endl;
-	std::ifstream file(fileName, std::ios::binary);
+	std::ifstream file(fileName.c_str(), std::ios::binary);
 
 	//  number of layers 
 	int numberLayers; 
@@ -114,7 +114,7 @@ void ParameterFileReader::readNetwork()
 
 void ParameterFileReader::writeNetwork()
 {
-	std::ofstream file(fileName, std::ios::binary);
+	std::ofstream file(fileName.c_str(), std::ios::binary);
 
 	//  number of layers 
 

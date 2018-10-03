@@ -18,8 +18,18 @@
 //
 
 #include "LearningLoop.h"
+#include <stdlib.h>
 
 
+
+
+
+
+LearningLoop::LearningLoop()
+{
+   selectCheckFunction = 0;
+
+}
 
 
 void LearningLoop::setNeuralNetwork(NeuralNetwork* n)

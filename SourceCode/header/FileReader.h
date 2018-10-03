@@ -29,9 +29,11 @@ class FileReader
 		std::vector<char> labels;
 
 
-		char* imageFileName      = (char*)"train-images.idx3-ubyte";
-		char* labelFileName      = (char*)"train-labels.idx1-ubyte"; 
-    public: 
+		char* imageFileName; //      = (char*)"train-images.idx3-ubyte";
+		char* labelFileName; //      = (char*)"train-labels.idx1-ubyte"; 
+    public:
+               
+                FileReader();  
 		void readImages(int numberOfImages, int sizeOfImage);
 		void readLabels(int numberOfLabels);
 		void printImage(int m); 
