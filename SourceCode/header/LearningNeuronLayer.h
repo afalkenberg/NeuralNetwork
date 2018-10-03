@@ -35,7 +35,7 @@ class LearningNeuronLayer : public NeuronLayer
 	   void initGradient(); 
 
 	   ActivationFunction activation;
-	   std::vector<double> learningRate = { 0.04, 0.013 };  // 0.0001 ok 
+	   std::vector<double> learningRate; // = { 0.04, 0.013 };  // 0.0001 ok 
 
 
    public: 

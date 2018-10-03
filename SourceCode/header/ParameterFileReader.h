@@ -29,12 +29,13 @@ class ParameterFileReader
 
 private:
 	
-	std::string fileName = "neuronalNetDescription.what";
+	std::string fileName;   // = "neuronalNetDescription.what";
 
 	NeuralNetwork* NET; 
 	
 public:
 
+        ParameterFileReader(); 
 	void setFileName(std::string);
 	void readNetwork();
 	void writeNetwork(); 

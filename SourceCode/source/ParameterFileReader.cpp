@@ -27,6 +27,12 @@
 #include <string>
 
 
+ParameterFileReader::ParameterFileReader()
+{
+   fileName = "neuronalNetDescription.what"; 
+}
+
+
 
 void ParameterFileReader::setFileName(std::string f)
 {

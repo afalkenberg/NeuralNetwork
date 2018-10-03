@@ -180,15 +180,17 @@ int main(int argc, char* argv[])
 
 
 	// prepare training samples // 
-	std::vector<std::vector<double >> expected;
-	std::vector<std::vector<double >> input;
+	std::vector<std::vector<double> > expected;
+	std::vector<std::vector<double> > input;
 
-	std::vector<std::vector<double >> expectedTest;
-	std::vector<std::vector<double >> inputTest;
+	std::vector<std::vector<double> > expectedTest;
+	std::vector<std::vector<double> > inputTest;
 
 
 
-	std::vector<double> learningRate = { 0.4, 0.3 };
+	std::vector<double> learningRate; 
+        learningRate.push_back(0.4);
+        learningRate.push_back(0.3);
 
 
 	// we can have as many layers with diffent nodes as we want // 

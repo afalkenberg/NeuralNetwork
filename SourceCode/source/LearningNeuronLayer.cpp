@@ -25,6 +25,8 @@ LearningNeuronLayer::LearningNeuronLayer()
 {
 
 	//init(2, 2); 
+        learningRate.push_back(0.04); 
+        learningRate.push_back(0.013); 
 }
 
 
