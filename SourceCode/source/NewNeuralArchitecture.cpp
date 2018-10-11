@@ -149,18 +149,6 @@ std::vector<double> createExpected(int nr)
 
 
 
-int main_test (int argc, char* argv[])
-{
-	ArgumentParser AG; 
-	AG.setInput(argc, argv);
-
-	std::cout << "name " << AG.getDouble("-n") << std::endl; 
-	std::cout << "age  " << AG.getInt("-a") << std::endl;
-	std::cout << "bla "  << AG.getDouble("-b") << std::endl; 
-
-	return 0; 
-}
-
 
 int main(int argc, char* argv[])
 {
@@ -247,17 +235,23 @@ int main(int argc, char* argv[])
 	}
 
 
-
-
-
+        // number of samples to learn (default 10000 so not enough) 
+        //
+        
+        int numSamples = 10000; 
+ 
+        if(AG.check("-N"))
+	{
+	   numSamples = AG.getInt("-N"); 	
+	}
 	/* MINST example  */
 
 
-	FR.readImages(1000, 784);
-	FR.readLabels(1000);
+	FR.readImages(10000, 784);
+	FR.readLabels(10000);
 
-	FRT.readImages(100, 784);
-	FRT.readLabels(100);
+	FRT.readImages(1000, 784);
+	FRT.readLabels(1000);
 
 
 	expected     = FR.getAllLabels();
@@ -325,7 +319,7 @@ int main(int argc, char* argv[])
 	// otherwise we only accumulate interim results 
 
 
-	for (int i = 0; i < 10000; i++)
+	for (int i = 0; i < numSamples; i++)
 	{
 
 		if (i % 5 == 0) // batch size of 5 in this case
@@ -345,7 +339,7 @@ int main(int argc, char* argv[])
 
 			double cc = LL.checkCorrect(); 
 			std::cout << std::endl; 
-			std::cout << i << " := " << cc * 100 << "%" << std::endl;
+			std::cout << i << " := " << cc * 100.0 << "%" << std::endl;
 			if (cc > 0.7)
 			{
 				betterThan70 = true; 

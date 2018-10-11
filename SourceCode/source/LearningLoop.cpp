@@ -131,7 +131,8 @@ double LearningLoop::checkCorrect()
 		
 
 	}
-
+        
+  
 	return (double)resCounter / (double)numSam; 
 	             
 }
